@@ -14,17 +14,10 @@ import com.test.actortest.messages.OpResult;
 import java.util.concurrent.CompletionStage;
 import java.util.function.BiFunction;
 
-import static com.test.actortest.MyUtil.PrintF;
+import static com.test.actortest.MyUtil.*;
 import static com.test.actortest.clients.DummyClient.SYMBOLS;
 
 public abstract class ActorBase extends AbstractActor {
-    public static final String YELLOW = "\u001B[33m";
-    public static final String RESET = "\u001B[0m";
-    public static final String WHITE = "\u001B[37m";
-    public static final String BLACK_BAG = "\u001B[40m";
-    public static final String CYAN = "\u001B[36m";
-    public static final String BLUE = "\u001B[34m";
-
 
     protected final DummyClient client;
 

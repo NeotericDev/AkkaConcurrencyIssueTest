@@ -18,8 +18,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-import static com.test.actortest.MyUtil.PrintF;
-import static com.test.actortest.MyUtil.PrintFB;
+import static com.test.actortest.MyUtil.*;
 import static com.test.actortest.clients.DummyClient.OPERATIONS;
 import static com.test.actortest.clients.DummyClient.SYMBOLS;
 
@@ -28,18 +27,6 @@ public abstract class ActorBaseTest {
     protected static ActorSystem system;
     protected static ActorRef actor;
     private ExecutorService executor = Executors.newFixedThreadPool(4);
-
-    public static final String GREEN = "\u001B[32m";
-    public static final String PURPLE_BG = "\u001B[45m";
-    public static final String RESET = "\u001B[0m";
-    public static final String BLACK = "\u001B[30m";
-    public static final String RED_BG = "\u001B[41m";
-    public static final String RED = "\u001B[31m";
-    public static final String GREEN_BG = "\u001B[42m";
-    public static final String WHITE = "\u001B[37m";
-    public static final String BOLD = "\033[0;1m";
-
-
 
     @Test
     public void test_addition_async(){
